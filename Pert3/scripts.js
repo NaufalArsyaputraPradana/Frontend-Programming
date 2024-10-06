@@ -18,7 +18,7 @@ const dataMahasiswa = [
       "Komunitas Pemrograman",
       "DNCC",
       "Doscom",
-      "Himpunan",
+      "Himpunan Teknik Informatika",
     ],
   },
   {
@@ -82,11 +82,11 @@ console.log(orgPertama, orgKedua, orgLainnya);
 
 // 4. Spread operator untuk field organisasi
 // spread operator
-const newOrganisasi = [...organisasi, "futsal"];
+const newOrganisasi = [...organisasi, "Futsal"];
 console.log(newOrganisasi);
 
 // 5. Update pada field fakultas dan field semester
-dataMahasiswa[0].fakultas = "Fakultas Baru";
+dataMahasiswa[0].fakultas = "Fakultas Kedokteran";
 dataMahasiswa[0].semester = 7;
 
 console.log(dataMahasiswa[0]);
@@ -144,17 +144,17 @@ console.log(sortBySemester);
 // 12. Menambahkan Mahasiswa Baru
 const newMahasiswa = {
   id: 4,
-  nama: "New Mahasiswa",
-  tanggalLahir: "2001-01-01",
+  nama: "Naufal Arsyaputra Pradana",
+  tanggalLahir: "2004-01-06",
   fakultas: "Fakultas Ilmu Komputer",
   programStudi: "Teknik Informatika",
-  semester: 2,
+  semester: 5,
   nilai: {
-    algoritma: 80,
-    basisData: 85,
+    algoritma: 100,
+    basisData: 105,
   },
   aktif: true,
-  organisasi: ["New Organisation"],
+  organisasi: ["Badan Eksekutif Mahasiswa"],
 };
 
 dataMahasiswa.push(newMahasiswa);
@@ -168,6 +168,6 @@ dataMahasiswa.splice(1);
 console.log(dataMahasiswa);
 
 // Update
-dataMahasiswa[0].nama = "Budi Santoso Updated";
+dataMahasiswa[0].nama = "Monkey D Luffy";
 
 console.log(dataMahasiswa);
