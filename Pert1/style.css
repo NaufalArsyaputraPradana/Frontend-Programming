@@ -1,0 +1,251 @@
+/* Mengatur font utama */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* Struktur container */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Styling header */
+header {
+  background-color: #08203b;
+  padding: 20px;
+  color: white;
+  text-align: right;
+}
+
+header button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+header button:hover {
+  background-color: #c0392b;
+}
+
+/* Mengatur layout utama */
+.main {
+  display: flex;
+  flex: 1;
+}
+
+/* Styling sidebar */
+aside {
+  background-color: #172a3c;
+  color: white;
+  width: 200px;
+  padding: 20px;
+}
+
+aside h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+aside nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+aside nav ul li {
+  margin-bottom: 15px;
+}
+
+aside nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+aside nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Styling konten utama */
+.content {
+  padding: 20px;
+  flex: 1;
+}
+
+/* Styling tabel mahasiswa */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ddd;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #4a90e2;
+  color: white;
+}
+
+td {
+  background-color: #f9f9f9;
+}
+
+/* Styling button tambah mahasiswa */
+.content button {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.content button:hover {
+  background-color: #2ecc71;
+}
+
+/* Styling modal overlay */
+.modal-overlay {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+}
+
+/* Styling modal */
+.modal {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  max-width: 100%;
+  position: relative;
+  animation: modalFadeIn 0.4s ease-out;
+}
+
+/* Animasi untuk kemunculan modal */
+@keyframes modalFadeIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Styling judul modal */
+.modal h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Styling input form */
+.modal input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+/* Warna border input saat fokus */
+.modal input[type="text"]:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+/* Styling tombol dalam modal */
+.modal button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+/* Styling tombol clear */
+.modal button#clear-form {
+  background-color: #f44336;
+  /* Warna merah untuk tombol clear */
+  margin-left: 10px;
+  /* Jarak antara tombol simpan dan clear */
+}
+
+.modal button#clear-form:hover {
+  background-color: #d32f2f;
+  /* Warna saat hover */
+}
+
+/* Styling tombol clear */
+.modal button#clear-edit-form {
+  background-color: #f44336;
+  /* Warna merah untuk tombol clear */
+  margin-left: 10px;
+  /* Jarak antara tombol simpan dan clear */
+}
+
+.modal button#clear-edit-form:hover {
+  background-color: #d32f2f;
+  /* Warna saat hover */
+}
+
+.modal button:hover {
+  background-color: #357abd;
+}
+
+/* Styling tombol close modal */
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 18px;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+  color: #333;
+}
+
+/* Styling footer */
+footer {
+  background-color: #08203b;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}

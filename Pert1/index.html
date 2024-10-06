@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel</title>
+    <!-- Memuat file CSS eksternal -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Bagian Header -->
+      <header>
+        <button>Logout</button>
+      </header>
+
+      <!-- Bagian Utama dengan Sidebar dan Konten -->
+      <div class="main">
+        <aside>
+          <h2>Admin Panel</h2>
+          <nav>
+            <ul>
+              <li><a href="#">Dashboard</a></li>
+              <li><a href="#">Mahasiswa</a></li>
+              <li><a href="#">Setting</a></li>
+            </ul>
+          </nav>
+        </aside>
+
+        <div class="content">
+          <h2>Data Mahasiswa</h2>
+          <!-- Tombol Tambah Mahasiswa -->
+          <button id="btn-tambah">Tambah Mahasiswa</button>
+          <!-- Tabel Mahasiswa -->
+          <table id="mahasiswa-table">
+            <thead>
+              <tr>
+                <th>No.</th>
+                <th>NIM</th>
+                <th>Nama</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Isi Tabel -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer>&copy; Naufal Arsyaputra Pradana - A11.2022.14606<br>Pemrograman Sisi Client - 2024</footer>
+    </div>
+
+    <!-- Modal Tambah Mahasiswa -->
+    <div id="modal-tambah" class="modal-overlay">
+      <div class="modal">
+        <span class="modal-close" id="close-tambah">&times;</span>
+        <h2>Tambah Mahasiswa</h2>
+        <form id="form-tambah">
+          <label for="name">Nama:</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Masukkan nama mahasiswa"
+            required
+          />
+          <label for="nim">NIM:</label>
+          <input
+            type="text"
+            id="nim"
+            placeholder="Masukkan NIM mahasiswa"
+            required
+          />
+          <div>
+            <button type="submit">Simpan</button>
+            <button type="button" id="clear-form">Clear</button>
+            <!-- Tombol Clear -->
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal Edit Mahasiswa -->
+    <div id="modal-edit" class="modal-overlay">
+      <div class="modal">
+        <span class="modal-close" id="close-edit">&times;</span>
+        <h2>Edit Mahasiswa</h2>
+        <form id="form-edit">
+          <label for="edit-name">Nama:</label>
+          <input
+            type="text"
+            id="edit-name"
+            placeholder="Masukkan nama mahasiswa"
+            required
+          />
+          <label for="edit-nim">NIM:</label>
+          <input
+            type="text"
+            id="edit-nim"
+            placeholder="Masukkan NIM mahasiswa"
+            required
+          />
+          <div>
+            <button type="submit">Update</button>
+            <button type="button" id="clear-edit-form">Clear</button>
+            <!-- Tombol Clear -->
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Memuat file JavaScript eksternal -->
+    <script src="script.js"></script>
+  </body>
+</html>
